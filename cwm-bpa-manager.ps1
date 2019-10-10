@@ -9,12 +9,16 @@ $VerbosePreference = "SilentlyContinue"
 function Load-CompanyIDs {
     [CmdletBinding()]
     [OutputType([System.Collections.Hashtable])]
-    Param ([string] $companyfile)
+    Param (
+        [validateScript({ (Test-path -Path $_ -PathType Leaf) -and ((Get-Item $_).length -gt 0) })]
+        [string] $companyfile)
     
     $retVal = [ordered]@{}
     
     $companyIDs = import-csv -Path $companyfile
-    
+    if (($companIDs -eq $null) -or ($companIDs.count -eq 0)) {
+        write-error "$companyfile returned a null or empty hashtable"
+    }
     
     Write-Verbose "Imported from file: $companyfile"
     $CompanyIDs | FT | Out-String | Write-Verbose
@@ -106,13 +110,13 @@ class Task {
     }
 }
 
-$a = Load-CompanyIDs $CompanyIDFile
-$a | ft
+$CompanyIDs = Load-CompanyIDs $CompanyIDFile
+
 
 
 #$a = $BPAReport_Type.Monthly
 <#
-$files = gci "C:\Users\Mike\Desktop\BPA Manager\clients\*.csv"
+
 
 $Server = [CWServer]::new("equilibrium", "eqwf.equilibriuminc.com", "MLDBHBvh5LNLyvuK", "QMcVdAojN8p6EA9J")
 
