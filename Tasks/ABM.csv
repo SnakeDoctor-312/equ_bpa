@@ -1,0 +1,9 @@
+Task,Freq,Budget,Annual Time,Engineer
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,JStraub
+Windows Patch Installation - Post Verification,Monthly,1,12,JStraub
+Review Office 365 Portal,Monthly,0.25,3,JStraub
+Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,JStraub
+Update NAS Firmware,Quarterly,0.25,1,JStraub
+Update Firewall Firmware,Quarterly,0.5,2,JStraub
+Update Switch Firmware,Annual,1,1,JStraub
+Nipper Studio Config Audit,Annual,1,1,JStraub

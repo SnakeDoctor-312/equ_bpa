@@ -1,0 +1,30 @@
+Task,Freq,Budget,Annual Time,Engineer
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,EThompson
+Windows Patch Installation - Post Verification,Monthly,1,12,EThompson
+Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,EThompson
+Update vCenter,Quarterly,1,4,EThompson
+Update Wireless Device Firmware,Quarterly,2,8,EThompson
+Backup Hypervisor Configuration,Quarterly,0.25,1,EThompson
+Update Server iLO Firmware,Quarterly,0.5,2,EThompson
+Update SAN Firmware,Quarterly,4,16,EThompson
+Update ESXi,Quarterly,4,16,EThompson
+Update Firewall Firmware,Quarterly,1,4,EThompson
+"Update SQL Server - Service Packs, Update Rollups",Quarterly,1,4,EThompson
+Update Server Firmware,Semi-Annual,1,2,EThompson
+Update Switch Firmware,Annual,1,1,EThompson
+Update UPS Firmware,Annual,1,1,EThompson
+Review Group Policies,Annual,1,1,EThompson
+Review Zerto Replications,Weekly,0.25,13,EThompson
+Review Barracuda Backups,Weekly,0.25,13,EThompson
+Update Zerto Appliances,Quarterly,4,16,EThompson
+Update Barracuda Appliance,Quarterly,4,16,EThompson
+Update FMC and Firepower Modules,Semi-Annual,4,8,Chornbeck
+DR Run Book,Quarterly,8,32,STabba
+Nipper Studio Config Audit,Annual,2,2,EThompson
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

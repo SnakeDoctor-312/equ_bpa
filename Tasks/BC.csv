@@ -1,0 +1,30 @@
+Task,Freq,Budget,Annual Time,Engineer
+Review Backups - Veeam,Weekly,0.25,13,MGarcia
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,MGarcia
+Windows Patch Installation - Post Verification,Monthly,1,12,MGarcia
+Review Office 365 Portal,Monthly,0.25,3,MGarcia
+Review Azure Portal,Monthly,0.5,6,MGarcia
+Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,MGarcia
+Update vCenter,Quarterly,1,4,MGarcia
+Backup Hypervisor Configuration,Quarterly,0.25,1,MGarcia
+Test File Level Restore from Backup (Veeam),Quarterly,0.5,2,MGarcia
+Update Server iLO Firmware,Quarterly,0.5,2,MGarcia
+Update NAS Firmware,Quarterly,1,4,MGarcia
+Update ESXi,Quarterly,4,16,MGarcia
+Update Firewall Firmware,Quarterly,0.5,2,MGarcia
+"Update SQL Server - Service Packs, Update Rollups",Quarterly,1,4,MGarcia
+Review Backup Configuration,Semi-Annual,0.5,1,MGarcia
+Update Server Firmware,Semi-Annual,4,8,MGarcia
+Update Switch Firmware,Annual,8,8,MGarcia
+Update UPS Firmware,Annual,4,4,MGarcia
+Review Group Policies,Annual,1,1,MGarcia
+Update Veeam,Quarterly,1,4,MGarcia
+Update FMC and Firepower Modules,Semi-Annual,4,8,Chornbeck
+Nipper Studio Config Audit,Annual,2,2,MGarcia
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

@@ -1,0 +1,30 @@
+Task,Freq,Budget,Annual Time,Engineer
+Review Backups - Veeam,Weekly,0.25,13,Bkew
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,Bkew
+Windows Patch Installation - Post Verification,Monthly,1,12,Bkew
+Review Office 365 Portal,Monthly,0.25,3,Bkew
+Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,Bkew
+Update vCenter,Quarterly,1,4,Bkew
+Update Wireless Device Firmware,Quarterly,0.5,2,Bkew
+Backup Hypervisor Configuration,Quarterly,0.25,1,Bkew
+Test File Level Restore from Backup (Veeam),Quarterly,0.5,2,Bkew
+Update Server iLO Firmware,Quarterly,0.25,1,Bkew
+Update NAS Firmware,Quarterly,0.25,1,Bkew
+Update ESXi,Quarterly,2,8,Bkew
+Update Firewall Firmware,Quarterly,0.5,2,Bkew
+"Update SQL Server - Service Packs, Update Rollups",Quarterly,1,4,Bkew
+Review Backup Configuration,Semi-Annual,0.5,1,Bkew
+Update Server Firmware,Semi-Annual,1,2,Bkew
+Update Switch Firmware,Annual,1,1,Bkew
+Review Group Policies,Annual,1,1,Bkew
+Update Veeam,Quarterly,1,4,Bkew
+Nipper Studio Config Audit,Annual,1.5,1.5,Bkew
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

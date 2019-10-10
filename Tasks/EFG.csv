@@ -1,0 +1,30 @@
+Task,Freq,Budget,Annual Time,Engineer
+Review Backups - Veeam,Weekly,0.25,13,BHeuser
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,BHeuser
+Windows Patch Installation - Post Verification,Monthly,1,12,BHeuser
+Review Office 365 Portal,Monthly,0.25,3,BHeuser
+Review Azure Portal,Monthly,0.5,6,BHeuser
+Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,BHeuser
+Update vCenter,Quarterly,1,4,BHeuser
+Backup Hypervisor Configuration,Quarterly,0.25,1,BHeuser
+Test File Level Restore from Backup (Veeam),Quarterly,0.5,2,BHeuser
+Update Server iLO Firmware,Quarterly,1,4,BHeuser
+Update NAS Firmware,Quarterly,2,8,BHeuser
+Update ESXi,Quarterly,4,16,BHeuser
+Update Firewall Firmware,Quarterly,0.5,2,BHeuser
+"Update SQL Server - Service Packs, Update Rollups",Quarterly,1,4,BHeuser
+Review Backup Configuration,Semi-Annual,0.5,1,BHeuser
+Update Server Firmware,Semi-Annual,1,2,BHeuser
+Update Switch Firmware,Annual,8,8,BHeuser
+Update Router Firmware,Annual,4,4,BHeuser
+Update UPS Firmware,Annual,4,4,BHeuser
+Review Group Policies,Annual,1,1,BHeuser
+Update Veeam,Quarterly,1,4,BHeuser
+DR Test,Quarterly,4,16,BHeuser
+Nipper Studio Config Audit,Annual,2,2,BHeuser
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

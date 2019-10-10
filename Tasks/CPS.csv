@@ -1,0 +1,30 @@
+Task,Freq,Budget,Annual Time,Engineer
+Review Group Policies,Annual,1,1,Tsenn
+Update UPS Firmware,Annual,2,2,Tsenn
+Update Switch Firmware,Annual,4,4,Tsenn
+Update Server Firmware,Semi-Annual,2,4,Tsenn
+Update Firewall Firmware,Quarterly,2,8,Tsenn
+Update Server iLO Firmware,Quarterly,1,4,Tsenn
+Update Wireless Non-Meraki Devices,Quarterly,4,16,Tsenn
+Update Wireless Meraki Devices,Quarterly,1,4,Tsenn
+Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,Tsenn
+Review Meraki Portal,Monthly,0.5,6,Tsenn
+Review Network (Auvik),Monthly,1,12,Tsenn
+Review Google Apps Portal,Monthly,0.25,3,Tsenn
+Review Office 365 Portal,Monthly,0.25,3,Tsenn
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.5,6,Tsenn
+Review Azure Replications,Weekly,0.25,13,Tsenn
+Review Azure Portal,Monthly,0.5,6,Tsenn
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

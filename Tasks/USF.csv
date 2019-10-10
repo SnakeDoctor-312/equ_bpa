@@ -1,0 +1,29 @@
+Task,Freq,Budget,Annual Time,Engineer
+Review Backups - Veeam,Weekly,0.25,13,TSenn
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,TSenn
+Windows Patch Installation - Post Verification,Monthly,1,12,TSenn
+Review Office 365 Portal,Monthly,0.25,3,TSenn
+Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,TSenn
+Update vCenter,Quarterly,1,4,TSenn
+Update Wireless Device Firmware,Quarterly,0.5,2,TSenn
+Backup Hypervisor Configuration,Quarterly,0.25,1,TSenn
+Test File Level Restore from Backup (Veeam),Quarterly,0.5,2,TSenn
+Test File Level Restore from Backup (Azure),Quarterly,0.5,2,TSenn
+Update Server iLO Firmware,Quarterly,0.5,2,TSenn
+Update NAS Firmware,Quarterly,0.25,1,TSenn
+Update ESXi,Quarterly,2,8,TSenn
+Update Firewall Firmware,Quarterly,1,4,TSenn
+Update vCenter,Quarterly,1,4,TSenn
+Review Backup Configuration,Semi-Annual,0.5,1,TSenn
+Update Switch Firmware,Annual,8,8,TSenn
+Update UPS Firmware,Annual,4,4,TSenn
+Review Group Policies,Annual,1,1,TSenn
+Update Veeam,Quarterly,1,4,TSenn
+Update FMC and Firepower Modules,Semi-Annual,4,8,Chornbeck
+Nipper Studio Config Audit,Annual,1,1,TSenn
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

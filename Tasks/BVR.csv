@@ -1,0 +1,30 @@
+Task,Freq,Budget,Annual Time,Engineer
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,Tsenn
+Windows Patch Installation - Post Verification,Monthly,1.5,18,Tsenn
+Review Logs of Windows Servers (Application/Security),Monthly,1.5,18,Tsenn
+Backup Hypervisor Configuration,Quarterly,0.25,1,Tsenn
+Update Server iLO Firmware,Quarterly,1.5,6,Tsenn
+Update NAS Firmware,Quarterly,1,4,Tsenn
+Update ESXi,Quarterly,1,4,Tsenn
+Update Firewall Firmware,Quarterly,0.5,2,Tsenn
+"Update SQL Server - Service Packs, Update Rollups",Quarterly,1,4,Tsenn
+"Update Exchange - Service Packs, Update Rollups",Quarterly,1,4,Tsenn
+Update Server Firmware,Semi Annual,1,0,Tsenn
+Update Switch Firmware,Annual,1,1,Tsenn
+Update UPS Firmware,Annual,1,1,Tsenn
+Review Group Policies,Annual,1,1,Tsenn
+Update Hyper-V hosts,Quarterly,6,24,Tsenn
+Review Backups - Quest Replications,Weekly,0.5,26,Tsenn
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

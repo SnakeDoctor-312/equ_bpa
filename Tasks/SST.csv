@@ -1,0 +1,30 @@
+Task,Freq,Budget,Annual Time,Engineer
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,JStraub
+Windows Patch Installation - Post Verification,Monthly,1,12,JStraub
+Review Office 365 Portal,Monthly,0.25,3,JStraub
+Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,JStraub
+Update vCenter,Quarterly,1,4,JStraub
+Update Wireless Device Firmware,Quarterly,0.5,2,JStraub
+Backup Hypervisor Configuration,Quarterly,0.25,1,JStraub
+Update Server iLO Firmware,Quarterly,0.25,1,JStraub
+Update NAS Firmware,Quarterly,0.5,2,JStraub
+Update ESXi,Quarterly,2,8,JStraub
+Update Firewall Firmware,Quarterly,2,8,JStraub
+"Update SQL Server - Service Packs, Update Rollups",Quarterly,1,4,JStraub
+"Update Exchange - Service Packs, Update Rollups",Quarterly,1,4,JStraub
+Update Server Firmware,Semi-Annual,4,8,JStraub
+Update Switch Firmware,Annual,8,8,JStraub
+Update Router Firmware,Annual,1,1,JStraub
+Update Cloud Genix Firmware,Quarterly,4,16,Bptak
+Review Group Policies,Annual,1,1,JStraub
+Review Datto Backups,Weekly,0.25,13,JStraub
+Nipper Studio Config Audit,Annual,4,4,JStraub
+Update SAN Firmware,Quarterly,4,16,JStraub
+Patch Group Review,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

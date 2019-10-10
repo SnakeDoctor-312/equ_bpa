@@ -1,0 +1,30 @@
+Task,Freq,Budget,Annual Time,Engineer
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,TSenn
+Windows Patch Installation - Post Verification,Monthly,1,12,TSenn
+Review Office 365 Portal,Monthly,0.25,3,TSenn
+Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,TSenn
+Update Firewall Firmware,Quarterly,0.5,2,TSenn
+Update Switch Firmware,Annual,1,1,TSenn
+Update Router Firmware,Annual,1,1,TSenn
+Update UPS Firmware,Annual,1,1,TSenn
+Review Group Policies,Annual,1,1,TSenn
+Review Backups - Carbonite,Weekly,0.25,13,TSenn
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

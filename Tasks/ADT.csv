@@ -1,0 +1,30 @@
+Task,Freq,Budget,Annual Time,Engineer
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,TSenn
+Windows Patch Installation - Post Verification,Monthly,1,12,TSenn
+Review Office 365 Portal,Monthly,0.25,3,TSenn
+Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,TSenn
+Backup Hypervisor Configuration,Semi-Annual,0.25,0.5,TSenn
+Update Server iLO Firmware,Semi-Annual,0.25,0.5,TSenn
+Update ESXi,Semi-Annual,1,2,TSenn
+Update Firewall Firmware,Semi-Annual,0.5,1,TSenn
+Update Server Firmware,Semi-Annual,1,2,TSenn
+Update Switch Firmware,Annual,1,1,TSenn
+Review Backups - Azure,Weekly,0.25,13,TSenn
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,

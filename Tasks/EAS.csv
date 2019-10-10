@@ -1,0 +1,30 @@
+Task,Freq,Budget,Annual Time,Engineer
+Review Backups - Veeam,Weekly,0.25,13,JStraub
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,JStraub
+Windows Patch Installation - Post Verification,Monthly,1,12,JStraub
+Review Office 365 Portal,Monthly,0.25,3,JStraub
+Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,JStraub
+Backup Hypervisor Configuration,Quarterly,0.25,1,JStraub
+Test File Level Restore from Backup (Veeam),Quarterly,0.5,2,JStraub
+Update Server iLO Firmware,Quarterly,0.25,1,JStraub
+Update NAS Firmware,Quarterly,0.25,1,JStraub
+Update Hyper-V hosts,Quarterly,2,8,JStraub
+Update Firewall Firmware,Quarterly,0.5,2,JStraub
+"Update SQL Server - Service Packs, Update Rollups",Quarterly,1,4,JStraub
+"Update Exchange - Service Packs, Update Rollups",Quarterly,1,4,JStraub
+Review Backup Configuration,Semi-Annual,0.5,1,JStraub
+Update Server Firmware,Semi-Annual,1,2,JStraub
+Update Switch Firmware,Annual,2,2,JStraub
+Review Group Policies,Annual,1,1,JStraub
+Update Veeam,Quarterly,1,4,JStraub
+Nipper Studio Config Audit,Annual,1,1,JStraub
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
