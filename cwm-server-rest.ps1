@@ -166,6 +166,12 @@
     [Object[]]GetTicket([int] $ticket) {
         return $this.DoRESTGetAction("service/tickets/"+ $ticket.ToString())
     }
+    
+    [Object[]]GetCompany([uint32] $companyID) {
+        return $this.DoRESTGetAction("company/companies/"+ $companyID.ToString())
+    }
+
+
 
     [bool]Connect() {
         if ($this.GetCallingComanyInfo() -eq $false) {
@@ -189,7 +195,7 @@
 }
 
 $Server = [CWServer]::new("equilibrium", "eqwf.equilibriuminc.com", "MLDBHBvh5LNLyvuK", "QMcVdAojN8p6EA9J")
-$server.connect()
+#$server.connect()
 
 
 #$q="conditions=board/id=71"
