@@ -8,7 +8,6 @@ Update vCenter,Quarterly,1,4,TSenn
 Update Wireless Device Firmware,Quarterly,0.5,2,TSenn
 Backup Hypervisor Configuration,Quarterly,0.25,1,TSenn
 Test File Level Restore from Backup (Veeam),Quarterly,0.5,2,TSenn
-Test File Level Restore from Backup (Azure),Quarterly,0.5,2,TSenn
 Update Server iLO Firmware,Quarterly,0.5,2,TSenn
 Update NAS Firmware,Quarterly,0.25,1,TSenn
 Update ESXi,Quarterly,2,8,TSenn
@@ -21,9 +20,3 @@ Review Group Policies,Annual,1,1,TSenn
 Update Veeam,Quarterly,1,4,TSenn
 Update FMC and Firepower Modules,Semi-Annual,4,8,Chornbeck
 Nipper Studio Config Audit,Annual,1,1,TSenn
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
