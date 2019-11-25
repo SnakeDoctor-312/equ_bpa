@@ -1,5 +1,7 @@
 Task,Freq,Budget,Annual Time,Engineer
+"Review Azure Backups",Weekly,0.25,3,JStraub
 "Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,JStraub
+"Post Patch Validation",Monthly,1,3,JStraub
 Windows Patch Installation - Post Verification,Monthly,1,12,JStraub
 Review Office 365 Portal,Monthly,0.25,3,JStraub
 Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,JStraub
