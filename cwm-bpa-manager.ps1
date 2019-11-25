@@ -92,30 +92,12 @@ function Load-CompanyData {
         $retVal += $NewCompany
     }
 
-    #$companyIDs | % { $retVal[$_.Company] = [Company]::new($_.Company, $_.ID) }
     return $retVal
 
 }
 
 
-   <## 
-    
-    foreach ($Company in $CompanyList) {
-        $CompanyJSON = $server.GetCompany($Company.id)
-        
-        $Company.identifier = $CompanyJSON.identifier
-        $Company.name = $CompanyJSON.name
-        
-        $CompanyFile = $path + $($Company.abbreviation) + ".csv"
-        if (isNotEmptyFile($companyFile)) {
-            $Company.path = $CompanyFile
-        }
-            
-    }
 
-    return $CompanyList
-}
-##>
 enum TaskFrequency {
         Weekly =  416;
         Monthly = 417;
@@ -153,8 +135,9 @@ class Task {
     [TaskCatergory]$subtype
     [string]$owner
     [string]$DueDate
+    [string]$Description
 
-    Task([string]$Summary, [String]$Frequency, [double]$Budget, [string]$subtype,[string]$owner)     {
+    Task([string]$Summary, [String]$Frequency, [double]$Budget, [string]$subtype,[string]$owner,[string]$InitialDescription)     {
         [datetime]$TaskDueDate = Get-date -Year 2019 -Month 12 -Date 28 -Hour 17 -Minute 30 -Second 0;
         $this.Summary = $Summary;
         $this.type = [TaskFrequency]$Frequency
@@ -164,9 +147,9 @@ class Task {
 
         switch($this.Type) {
             ([TaskFrequency]::Weekly)
-                {$TaskDueDate = Get-date -Year 2019 -Month 10 -Day 09 -Hour 17 -Minute 30 -Second 0}
+                {$TaskDueDate = Get-date -Year 2019 -Month 11 -Day 20 -Hour 17 -Minute 30 -Second 0}
             ([TaskFrequency]::Monthly)
-                 {$TaskDueDate = Get-date -Year 2019 -Month 10 -Day 31 -Hour 17 -Minute 30 -Second 0}
+                 {$TaskDueDate = Get-date -Year 2019 -Month 11 -Day 30 -Hour 17 -Minute 30 -Second 0}
             ([TaskFrequency]::Quarterly)
                  {$TaskDueDate = Get-date -Year 2019 -Month 12 -Day 28 -Hour 17 -Minute 30 -Second 0}
             ([TaskFrequency]::SemiAnnual)
@@ -182,16 +165,35 @@ class Task {
     }
 }
 
+
+$Server = [CWServer]::new("equilibrium", "eqwf.equilibriuminc.com", "MLDBHBvh5LNLyvuK", "QMcVdAojN8p6EA9J")
 $server.connect()
 
 $Companies = Load-CompanyData $CompanyIDFile $TaskFolder
 
+$Companies | ft
+
 foreach ($company in $Companies) {
-#$Companies = Lookup-Companies $TaskFolder $Companies
-#$Companies | ft
-    
+    $company.Path
+    $tasks = import-csv $company.Path
+    $tasks | ft
+    foreach ($Task in $tasks) {
+        if ($task.Task -ne "") {
+            if ($Task.Freq -eq "Weekly") {
+                $newTask = [Task]::new($task.Task, $Task.Freq, $Task.Budget, "System", $Task.Engineer, "None")
+                $Server.CreateTicket($newTask.Summary, "None at this time", $company.id, $newTask.owner, 71, $newTask.Type, $newTask.subtype, 1022, $newtask.DueDate, $newTask.budget)
+            }
+           # if ($Task.Freq -eq "Monthly") {
+            #    $newTask = [Task]::new($task.Task, $Task.Freq, $Task.Budget, "System", $Task.Engineer, "None")
+             #   $Server.CreateTicket($newTask.Summary, "None at this time", $company.id, $newTask.owner, 71, $newTask.Type, $newTask.subtype, 1022, $newtask.DueDate, $newTask.budget)
+            #}
+            
+        }
+    }
+}
 
     
+
 
 
 
@@ -205,19 +207,7 @@ $Server = [CWServer]::new("equilibrium", "eqwf.equilibriuminc.com", "MLDBHBvh5LN
 
 
 foreach ($file in $files) {
-    $ClientName = [uint32]$file.name.substring(0,$file.name.length-4)
-    $ClientName
-    #$file.FullName
-    $tasks = import-csv $file.FullName
-    foreach ($Task in $tasks) {
-        if ($task.Task -ne "") {
-            if ($Task.Freq -eq "Weekly") {
-                $newTask = [Task]::new($task.Task, $Task.Freq, $Task.Budget, "System", $Task.Engineer)
-                $Server.CreateTicket($newTask.Summary, "None at this time", $ClientName, $newTask.owner, 71, $newTask.Type, $newTask.subtype, 1022, $newtask.DueDate, $newTask.budget)
-            }
-            
-        }
-    }
+    
 }
 
 

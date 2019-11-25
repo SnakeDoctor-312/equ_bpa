@@ -14,17 +14,4 @@ Update Switch Firmware,Annual,1,1,Tsenn
 Update UPS Firmware,Annual,1,1,Tsenn
 Review Group Policies,Annual,1,1,Tsenn
 Update Hyper-V hosts,Quarterly,6,24,Tsenn
-Review Backups - Quest Replications,Weekly,0.5,26,Tsenn
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
+Review Backups - Azure Replications,Weekly,0.5,26,Tsenn
