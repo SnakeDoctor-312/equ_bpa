@@ -1,30 +1,16 @@
 Task,Freq,Budget,Annual Time,Engineer
-Review Backups - Veeam,Weekly,0.25,13,CJackson
-"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,CJackson
-Windows Patch Installation - Post Verification,Monthly,1,12,CJackson
-Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,CJackson
-Update vCenter,Quarterly,1,4,CJackson
-Backup Hypervisor Configuration,Quarterly,0.25,1,CJackson
-Test File Level Restore from Backup (Veeam),Quarterly,0.5,2,CJackson
-Update Server iLO Firmware,Quarterly,0.25,1,CJackson
-Update NAS Firmware,Quarterly,0.25,1,CJackson
-Update ESXi,Quarterly,1,4,CJackson
-Update Firewall Firmware,Quarterly,0.5,2,CJackson
-Review Backup Configuration,Semi-Annual,0.5,1,CJackson
-Update Server Firmware,Semi-Annual,1,2,CJackson
-Review Group Policies,Annual,1,1,CJackson
-Update Veeam,Quarterly,1,4,CJackson
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
+Review Backups - Veeam,Weekly,0.25,13,tsenn
+"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,tsenn
+Windows Patch Installation - Post Verification,Monthly,1,12,tsenn
+Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,tsenn
+Update vCenter,Quarterly,1,4,tsenn
+Backup Hypervisor Configuration,Quarterly,0.25,1,tsenn
+Test File Level Restore from Backup (Veeam),Quarterly,0.5,2,tsenn
+Update Server iLO Firmware,Quarterly,0.25,1,tsenn
+Update NAS Firmware,Quarterly,0.25,1,tsenn
+Update ESXi,Quarterly,1,4,tsenn
+Update Firewall Firmware,Quarterly,0.5,2,tsenn
+Review Backup Configuration,Semi-Annual,0.5,1,tsenn
+Update Server Firmware,Semi-Annual,1,2,tsenn
+Review Group Policies,Annual,1,1,tsenn
+Update Veeam,Quarterly,1,4,tsenn
