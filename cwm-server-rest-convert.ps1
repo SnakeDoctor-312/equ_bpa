@@ -35,7 +35,7 @@
     CWServer([string]$LoginCompanyId, [string]$ConnectwiseSite) {
         $this.LoginCompanyId = $LoginCompanyId
         $this.ConnectwiseSite = $ConnectwiseSite
-        $this.CallingCompanyInfoURL = "https://" + $ConnectWiseSite + "/login/companyinfo/" + $LoginCompanyId
+        $this.CallingCompanyInfoURL = "http://" + $ConnectWiseSite + "/login/companyinfo/" + $LoginCompanyId
     }
 
     [bool]GetCallingComanyInfo() {
@@ -61,7 +61,7 @@
     }
 
     [void]CreateAPIRequestURL() {
-        $this.APIRequestURL = "https://" + $this.ConnectwiseSite + "/" + $this.codebase + "apis/3.0/"
+        $this.APIRequestURL = "http://" + $this.ConnectwiseSite + "/" + $this.codebase + "apis/3.0/"
     }
 
     [void]StoreAPIKeys([string] $public, [string] $private) {
@@ -76,11 +76,12 @@
     }
         
     [Object[]]DoRESTGetAction([string] $request) {
-        $result = Invoke-RestMethod -Method Get -Uri "$($this.APIRequestURL)$request" -Headers $this.AuthHeader -UseBasicParsing
+        $URI = "$($this.APIRequestURL)$request"
+        $result = Invoke-RestMethod -Method Get -Uri $URI  -Headers $this.AuthHeader -UseBasicParsing -ContentType "application/json"
         return $result;
     }
 
-    [Object[]]DoRESTPatchAction([string] $request, [PSCustomObject] $action) {
+    [Object[]]DoRESTPatchAction([string] $request, [string] $action) {
         #$action = ConvertTo-Json -Compress -InputObject $action -depth 100 |Out-String
         #$action ="[$action]"
         #write-host $action
@@ -184,6 +185,9 @@
     [Object[]]GetServiceBoardStatuses([int] $board, [int] $size) {
         return $this.DoRESTGetAction("service/boards/"+ $board.ToString() + "/statuses?&pageSize="+ $size.ToString())
     }
+    [Object[]]GetConfigurationTypes([int] $size) {
+        return $this.DoRESTGetAction("company/configurations/types?&pageSize="+ $size.ToString())
+    }
 
     [Object[]]GetTicket([int] $ticket) {
         return $this.DoRESTGetAction("service/tickets/"+ $ticket.ToString())
@@ -212,6 +216,8 @@
 
 $Server = [CWServer]::new("equilibrium", "eqwf.equilibriuminc.com", "MLDBHBvh5LNLyvuK", "QMcVdAojN8p6EA9J")
 $server.connect()
+$server.GetConfigurationTypes(150)| ft -Property id, name, inactiveFlag
+$server.GetConfigurationTypes(150) | Select-Object -Property id, name, inactiveFlag | Export-csv -Path C:\users\mdeliberto\desktop\cwm-configtypes.csv
 
 
   $action1="{
@@ -223,9 +229,9 @@ $server.connect()
         }
   }"
 
-$ii = 19350
-$gettarget = "configurations/types"#+  $ii +"/"
-#$target = "configurations/"+  $ii  +"/changetype"
+#$ii = 19350
+#$gettarget = "configurations/types?&pageSize=150"
+#$target = "company/configurations/"+  $ii  +"/changetype"
 #$server.AuthHeader
 
 
