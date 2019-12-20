@@ -83,7 +83,6 @@
     [Object[]]DoRESTPatchAction([string] $request, [PSCustomObject] $action) {
         #$action = ConvertTo-Json -Compress -InputObject $action -depth 100 |Out-String
         #$action ="[$action]"
-        #write-host $action
         $result = Invoke-RestMethod -Method Patch -Uri "$($this.APIRequestURL)$request" -Headers $this.AuthHeader -ContentType "application/json" -UseBasicParsing -Body $action
         return $result;
     }
@@ -189,6 +188,10 @@
         return $this.DoRESTGetAction("service/tickets/"+ $ticket.ToString())
     }
 
+    [Object[]]GetCompany([int] $companyID) {
+        return $this.DoRESTGetAction("company/companies/"+ $companyID.ToString())
+    }
+
     [bool]Connect() {
         if ($this.GetCallingComanyInfo() -eq $false) {
             Write-Error "Failed to connect to the server, closing"
@@ -212,19 +215,14 @@
 
 $Server = [CWServer]::new("equilibrium", "eqwf.equilibriuminc.com", "MLDBHBvh5LNLyvuK", "QMcVdAojN8p6EA9J")
 $server.connect()
+$a = $Server.GetCompany( 19036)
+
+$a.identifier
+$a.name
 
 
-  $action1="{
-    ""op"": ""replace"",
-    ""path"": ""type"",
-    ""value"": 
-    	{
-          ""id"": ""111""
-        }
-  }"
 
-$ii = 19350
-$gettarget = "configurations/types"#+  $ii +"/"
+#+  $ii +"/"
 #$target = "configurations/"+  $ii  +"/changetype"
 #$server.AuthHeader
 

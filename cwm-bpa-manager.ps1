@@ -1,56 +1,13 @@
-﻿#. "C:\Users\Mike\Desktop\equ_bpa\cwm-server-rest.ps1"
-. "C:\Users\mdeliberto\Desktop\equ_bpa\cwm-server-rest.ps1"
+﻿. "$PSScriptRoot\cwm-server-rest.ps1"
+. "$PSScriptRoot\bpa-date-functions.ps1"
+. "$PSScriptRoot\bpa-validator-functions.ps1"
 
-$TaskFolder = "C:\Users\mdeliberto\Desktop\equ_bpa\Tasks"
-$CompanyIDFile = "C:\Users\mdeliberto\Desktop\equ_bpa\CompanyIDs.csv"
-
-#[string]$TaskFolder = "C:\Users\Mike\Desktop\equ_bpa\Tasks"
-#$CompanyIDFile = "C:\Users\Mike\Desktop\equ_bpa\CompanyIDs.csv"
+$TaskFolder = "$PSScriptRoot\Tasks"
+$CompanyIDFile = "$PSScriptRoot\CompanyIDs.csv"
 
 #$VerbosePreference = "continue"
-$VerbosePreference = "SilentlyContinue"
+#$VerbosePreference = "SilentlyContinue"
 
-function isNotEmptyFile {
-    [CmdletBinding()]
-    param(
-    [OutputType([bool])]
-    [Parameter(Mandatory=$True)]
-    [ValidateNotNullorEmpty()]
-    [string]$path)
-    return (Test-path -Path $path -PathType Leaf) -and ((Get-Item $path).length -gt 0)
-}
-
-function isNotEmptyNull {
-    [CmdletBinding()]
-    param(
-    [OutputType([bool])]
-    [Parameter(Position=0, Mandatory=$True,ParameterSetName="Array")]
-    [System.Object[]]$array,
-    [Parameter(Position=0, Mandatory=$True,ParameterSetName="HashTable")]
-    [System.Collections.Hashtable]$table,
-    [Parameter(Position=0, Mandatory=$True,ParameterSetName="OrderedDictionary")]
-    [System.Collections.Specialized.OrderedDictionary]$ordereddictionary,
-    [Parameter(Position=0, Mandatory=$True,ParameterSetName="String")]
-    [string]$string)
-    switch ($PsCmdlet.ParameterSetName)
-    {
-        "Array" {return (($array -ne $null) -and ($array.count -ne 0))}
-        "HashTable" {return -not ($table -ne $null) -and ($table.count -ne 0)}
-        "OrderedDictionary" {return -not ($OrderedDictionary -ne $null) -and ($OrderedDictionary.count -ne 0)}
-        "String" {return -not ($string -ne $null) -and ($string.length -ne 0)}
-    }
-
-}
-
-function isEmptyNull {
-    [CmdletBinding()]
-    param(
-    [OutputType([bool])]
-    [Parameter(Position=0, Mandatory=$True)]
-    $arg)
-    return $(-not $(isNotEmptyNull $arg))
-}
-##>>
 class Company {
     [string]$abbreviation
     [uint32]$id
@@ -67,7 +24,7 @@ class Company {
 
 function Load-CompanyData {
     [CmdletBinding()]
-    [OutputType([Company])]
+    [OutputType([Company[]])]
     Param (
         [validateScript({ isNotEmptyFile($_) })]
         [string] $companyfile,
@@ -89,13 +46,14 @@ function Load-CompanyData {
     foreach ($CompanyID in $companyIDs) {
         [Company]$NewCompany = [Company]::new($CompanyID.Company, $CompanyID.ID)
         
-        #$CompanyJSON = $server.GetCompany($NewCompany.id)
+        $CompanyJSON = $server.GetCompany($NewCompany.id)
+        
         $NewCompany.identifier = $CompanyJSON.identifier
         $NewCompany.name = $CompanyJSON.name
         
         $ABBR =  $NewCompany.abbreviation
         $CompanyFile = $path + "\"+$ABBR + ".csv"
-    if (isNotEmptyFile $companyFile) {
+        if (isNotEmptyFile $companyFile) {
             $NewCompany.path = $CompanyFile
         }
         $retVal += $NewCompany
@@ -178,16 +136,39 @@ class Task {
 $Server = [CWServer]::new("equilibrium", "eqwf.equilibriuminc.com", "MLDBHBvh5LNLyvuK", "QMcVdAojN8p6EA9J")
 $server.connect()
 
-#[Company[]] $Companies #= @()
+
 $Companies = Load-CompanyData $CompanyIDFile $TaskFolder
 
 $Companies | ft
 
 foreach ($company in $Companies) {
-    $company | ft
-    
     $tasks = import-csv $company.Path
-    #$tasks | ft
+    foreach ($task in $tasks) {
+        if ($task -ne "") {
+            if (isNewWeek) {
+                #close all weeklies
+                #Create Weelkies
+            }
+            if (isNewMonth) {
+                #close all weeklies
+                #Create Weelkies
+            }
+            if (isNewQuarter) {
+                #close all weeklies
+                #Create Weelkies
+            }
+            if (isNewHalfYear) {
+                #close all weeklies
+                #Create Weelkies
+            }
+            if (isNewYear) {
+                #close all weeklies
+                #Create Weelkies
+            }
+        } else {
+            ###
+        }
+    }
 }
     <##foreach ($Task in $tasks) {
         if ($task.Task -ne "") {
