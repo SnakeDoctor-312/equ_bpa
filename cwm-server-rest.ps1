@@ -213,12 +213,12 @@
  #   authorization: Basic ZXF1aWxpYnJpdW1NTERCSEJ2aDVMTkx5dnVLOlFNY1ZkQW9qTjhwNkVBOUo=
 }
 
-$Server = [CWServer]::new("equilibrium", "eqwf.equilibriuminc.com", "MLDBHBvh5LNLyvuK", "QMcVdAojN8p6EA9J")
-$server.connect()
-$a = $Server.GetCompany( 19036)
+#$Server = [CWServer]::new("equilibrium", "eqwf.equilibriuminc.com", "MLDBHBvh5LNLyvuK", "QMcVdAojN8p6EA9J")
+#$server.connect()
+#$a = $Server.GetCompany( 19036)
 
-$a.identifier
-$a.name
+#$a.identifier
+#$a.name
 
 
 
