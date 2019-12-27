@@ -29,7 +29,7 @@ foreach ($company in $Companies) {
             #Create Weelkies
             if ($Task.Frequency -eq "Weekly") {
                 $company.abbreviation
-                $task.Summary
+                $task
                 #$newTask = [Task]::new($task.Task, $Task.Freq, $Task.Budget, "System", $Task.Engineer, "None")
                 #$Server.CreateTicket($newTask.Summary, "None at this time", $company.id, $newTask.owner, 71, $newTask.Type, $newTask.subtype, 1022, $newtask.DueDate, $newTask.budget)
             }
@@ -37,7 +37,7 @@ foreach ($company in $Companies) {
         #if (isNewMonth) {
             if ($Task.Frequency -eq "Monthly") {
                 $company.abbreviation
-                $task.Summary
+                $task
                 #$newTask = [Task]::new($task.Task, $Task.Freq, $Task.Budget, "System", $Task.Engineer, "None")
                 #$Server.CreateTicket($newTask.Summary, "None at this time", $company.id, $newTask.owner, 71, $newTask.Type, $newTask.subtype, 1022, $newtask.DueDate, $newTask.budget)
             }
@@ -45,7 +45,7 @@ foreach ($company in $Companies) {
         #if (isNewQuarter) {
             if ($Task.Frequency -eq "Quarterly") {
                 $company.abbreviation
-                $task.Summary
+                $task
                 #$newTask = [Task]::new($task.Task, $Task.Freq, $Task.Budget, "System", $Task.Engineer, "None")
                 #$Server.CreateTicket($newTask.Summary, "None at this time", $company.id, $newTask.owner, 71, $newTask.Type, $newTask.subtype, 1022, $newtask.DueDate, $newTask.budget)
             }
@@ -53,7 +53,7 @@ foreach ($company in $Companies) {
         #if (isNewHalfYear) {
             if ($Task.Frequency -eq "SemiAnnual") {
                 $company.abbreviation
-                $task.Summary
+                $task
                 #$newTask = [Task]::new($task.Task, $Task.Freq, $Task.Budget, "System", $Task.Engineer, "None")
                 #$Server.CreateTicket($newTask.Summary, "None at this time", $company.id, $newTask.owner, 71, $newTask.Type, $newTask.subtype, 1022, $newtask.DueDate, $newTask.budget)
             }
@@ -61,7 +61,7 @@ foreach ($company in $Companies) {
         #if (isNewYear) {
                 if ($Task.Frequency -eq "Annual") {
                 $company.abbreviation
-                $task.Summary
+                $task
                 #$newTask = [Task]::new($task.Task, $Task.Freq, $Task.Budget, "System", $Task.Engineer, "None")
                 #$Server.CreateTicket($newTask.Summary, "None at this time", $company.id, $newTask.owner, 71, $newTask.Type, $newTask.subtype, 1022, $newtask.DueDate, $newTask.budget)
             }

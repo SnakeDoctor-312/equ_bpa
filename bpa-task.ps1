@@ -82,12 +82,12 @@ function Load-ClientTasks {
     Write-Verbose "Located $($taskImport.Count) rows"
     
     foreach ($taskRow in $taskImport) {
-        if (($taskRow.Summary -eq "") -or `
-            ($taskRow.Budget -eq "") -or `
-            ($taskRow.Catergory -eq "") -or `
-            ($taskRow.Description -eq "") -or `
-            ($taskRow.Freq -eq "") -or `
-            ($taskRow.Engineer-eq "")) {
+        if ([string]::IsNullOrEmpty($taskRow.Summary)     -or [string]::IsNullOrWhiteSpace($taskRow.Summary) -or `
+            [string]::IsNullOrEmpty($taskRow.Budget)      -or [string]::IsNullOrWhiteSpace($taskRow.Budget) -or `
+            [string]::IsNullOrEmpty($taskRow.Catergory)   -or [string]::IsNullOrWhiteSpace($taskRow.Catergory) -or `
+            [string]::IsNullOrEmpty($taskRow.Description) -or [string]::IsNullOrWhiteSpace($taskRow.Description) -or `
+            [string]::IsNullOrEmpty($taskRow.Freq)        -or [string]::IsNullOrWhiteSpace($taskRow.Freq) -or `
+            [string]::IsNullOrEmpty($taskRow.Engineer)    -or [string]::IsNullOrWhiteSpace($taskRow.Engineer)) {
             break;    
         } else {
            [Task]$NewTask = [Task]::new($taskRow.Summary, [TaskFrequency]$taskRow.Freq, $taskRow.Budget, $taskRow.engineer, $taskRow.Description, [TaskCategory]$taskRow.Catergory)
