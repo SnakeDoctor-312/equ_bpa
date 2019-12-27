@@ -8,8 +8,9 @@
 $TaskFolder = "$PSScriptRoot\Tasks"
 $CompanyIDFile = "$PSScriptRoot\CompanyIDs.csv"
 
-$VerbosePreference = "continue"
-#$VerbosePreference = "SilentlyContinue"
+#$VerbosePreference = "continue"
+#$WarningAction Inquire
+$VerbosePreference = "SilentlyContinue"
 
 
 $Server = [CWServer]::new("equilibrium", "eqwf.equilibriuminc.com", "MLDBHBvh5LNLyvuK", "QMcVdAojN8p6EA9J")
@@ -17,8 +18,6 @@ $null = $server.connect()
 
 
 $Companies = Load-CompanyData $CompanyIDFile $TaskFolder
-
-$Companies | ft
 
 foreach ($company in $Companies) {
     $company

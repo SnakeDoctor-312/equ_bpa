@@ -84,19 +84,19 @@ function Load-ClientTasks {
     foreach ($taskRow in $taskImport) {
         if ([string]::IsNullOrEmpty($taskRow.Summary)     -or [string]::IsNullOrWhiteSpace($taskRow.Summary) -or `
             [string]::IsNullOrEmpty($taskRow.Budget)      -or [string]::IsNullOrWhiteSpace($taskRow.Budget) -or `
-            [string]::IsNullOrEmpty($taskRow.Catergory)   -or [string]::IsNullOrWhiteSpace($taskRow.Catergory) -or `
+            [string]::IsNullOrEmpty($taskRow.Category)   -or [string]::IsNullOrWhiteSpace($taskRow.Category) -or `
             [string]::IsNullOrEmpty($taskRow.Description) -or [string]::IsNullOrWhiteSpace($taskRow.Description) -or `
             [string]::IsNullOrEmpty($taskRow.Freq)        -or [string]::IsNullOrWhiteSpace($taskRow.Freq) -or `
             [string]::IsNullOrEmpty($taskRow.Engineer)    -or [string]::IsNullOrWhiteSpace($taskRow.Engineer)) {
+            write-warning "Found an empty, null or white space string in file: $clientTasks `n will gracefully drop:`n$taskrow.`n Error: Your inputfile has empty/bad data."
             break;    
         } else {
-           [Task]$NewTask = [Task]::new($taskRow.Summary, [TaskFrequency]$taskRow.Freq, $taskRow.Budget, $taskRow.engineer, $taskRow.Description, [TaskCategory]$taskRow.Catergory)
+           [Task]$NewTask = [Task]::new($taskRow.Summary, [TaskFrequency]$taskRow.Freq, $taskRow.Budget, $taskRow.Engineer, $taskRow.Description, [TaskCategory]$taskRow.Category)
                   
             if ($newTask -ne $null) {
                 $retVal += $newTask
             }
         }
-        $A | out-null
     }
 
     return $retVal;

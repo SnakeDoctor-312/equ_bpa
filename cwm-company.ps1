@@ -27,6 +27,7 @@ function Load-CompanyData {
 
     if (-not (isNotEmptyNull $companyIDs)) {
         write-error "$companyfile returned a null or empty hashtable"
+        Write-Error "This means the file is likely empty"
     }
     
     Write-Verbose "Imported from file: $companyfile"
@@ -35,9 +36,13 @@ function Load-CompanyData {
         
     foreach ($CompanyID in $companyIDs) {
         [Company]$NewCompany = [Company]::new($CompanyID.Company, $CompanyID.ID)
-        
+
         $CompanyJSON = $server.GetCompany($NewCompany.id)
-        
+
+        if ($CompanyJSON.identifier -notlike "$($CompanyID.Company)*") {
+            #Write-Warning -WarningAction Continue "Error while processing $companyfile`n While validating the following line from the file: $($CompanyID.Company), $($CompanyID.ID)`n Error: $($CompanyJSON.identifier) mismtach with $($NewCompany.abbreviation)" 
+        }
+                
         $NewCompany.identifier = $CompanyJSON.identifier
         $NewCompany.name = $CompanyJSON.name
         
@@ -46,6 +51,7 @@ function Load-CompanyData {
         if (isNotEmptyFile $companyFile) {
             $NewCompany.path = $CompanyFile
             (get-content $companyfile) -replace ",,,,,,","" |  Out-File $companyfile
+            (get-content $companyfile) | ? {$_.trim() -ne "" } | set-content $companyfile
         }
         $retVal += $NewCompany
     }
