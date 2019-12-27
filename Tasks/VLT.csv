@@ -1,30 +1,30 @@
-Task,Freq,Budget,Annual Time,Engineer
-"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,TSenn
-Windows Patch Installation - Post Verification,Monthly,1,12,TSenn
-Review Office 365 Portal,Monthly,0.25,3,TSenn
-Review Logs of Windows Servers (Application/Security),Monthly,0.5,6,TSenn
-Update Firewall Firmware,Quarterly,0.5,2,TSenn
-Update Switch Firmware,Annual,1,1,TSenn
-Update Router Firmware,Annual,1,1,TSenn
-Update UPS Firmware,Annual,1,1,TSenn
-Review Group Policies,Annual,1,1,TSenn
-Review Backups - Carbonite,Weekly,0.25,13,TSenn
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
+Summary,Freq,Budget,Annual Time,Engineer,Description,Category
+Review Active Directory,Monthly,0.25,3,TSenn,"Review the Active Directory enviornment for issues via  repadmin, dcdiag. Review admin group memberships for unauthrized members",System
+Windows Patch Installation - Post Verification,Monthly,1,12,TSenn,Review the operation of the client's server post update,System
+Review Office 365 Portal,Monthly,0.25,3,TSenn,Review the client's Office 365 portal for licensing or other issues,Cloud
+Review Windows Server Logs,Monthly,0.5,6,TSenn,Review the client's windows server application and security logs for standout issues,System
+Update Firewall Firmware,Quarterly,0.5,2,TSenn,Install the reccommended firewall firmware,Network
+Update Switch Firmware,Annual,1,1,TSenn,Update the firmware on the client's switches,Network
+Update Router Firmware,Annual,1,1,TSenn,Update the firmware on the client's router(s),Network
+Update UPS Firmware,Annual,1,1,TSenn,Update the firmware on the web controller of the client's UPS(s),System
+Review Group Policies,Annual,1,1,TSenn,Work with the account's vCIO or primary engineer to review the configuration of the client's Group policies. Ensure that the configuraiton is still optimal for the client's environment.,System
+Review Backups (Carbonite),Weekly,0.25,13,TSenn,Review the client's Carbonite backups for issues,System
+Review Network,Monthly,1,12,TSenn,"Utilizing Auvik, review the client's network for issues. Ensure all infrastructure devices are SNMP \ login integrated. Ensure that all devices classified appropraitely.",Network
+Update Carbonite Agents,Quarterly,1,4,TSenn,Update the client's Carbonite agents,System
+Patch Group Review,Quarterly,0.5,2,TSenn,Review the patch approval policies. Ensure all servers and workstations that are supposed to be automatically patched are (by being in the correct patch groups),System
+Update Wireless Device Firmware,Quarterly,1,4,TSenn,Update the firmware on the client's access points,Network
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,

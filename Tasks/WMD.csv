@@ -1,17 +1,30 @@
-Task,Freq,Budget,Annual Time,Engineer
-"Review Active Directory (Admin Groups, repadmin, dcdiag)",Monthly,0.25,3,Tsenn
-Windows Patch Installation - Post Verification,Monthly,1.5,18,Tsenn
-Review Logs of Windows Servers (Application/Security),Monthly,1.5,18,Tsenn
-Backup Hypervisor Configuration,Quarterly,0.25,1,Tsenn
-Update Server iLO Firmware,Quarterly,1.5,6,Tsenn
-Update NAS Firmware,Quarterly,1,4,Tsenn
-Update ESXi,Quarterly,1,4,Tsenn
-Update Firewall Firmware,Quarterly,0.5,2,Tsenn
-"Update SQL Server - Service Packs, Update Rollups",Quarterly,1,4,Tsenn
-"Update Exchange - Service Packs, Update Rollups",Quarterly,1,4,Tsenn
-Update Server Firmware,Semi Annual,1,0,Tsenn
-Update Switch Firmware,Annual,1,1,Tsenn
-Update UPS Firmware,Annual,1,1,Tsenn
-Review Group Policies,Annual,1,1,Tsenn
-Update Hyper-V hosts,Quarterly,6,24,Tsenn
-Review Backups - Azure Replications,Weekly,0.5,26,Tsenn
+Summary,Freq,Budget,Annual Time,Engineer,Description,Category
+Review Active Directory,Monthly,0.25,3,????,"Review the Active Directory enviornment for issues via  repadmin, dcdiag. Review admin group memberships for unauthrized members",System
+Windows Patch Installation - Post Verification,Monthly,0.5,6,????,Review the operation of the client's server post update,System
+Review Office 365 Portal,Monthly,0.25,3,????,Review the client's Office 365 portal for licensing or other issues,Cloud
+Review Azure Portal,Monthly,0.5,6,????,Review the Azure portal for issues.,Cloud
+Review Windows Server Logs,Monthly,0.5,6,????,Review the client's windows server application and security logs for standout issues,System
+Review Backups (Carbonite),Monthly,1,12,????,Review the client's Carbonite backups for issues,System
+"User List Update – Carbonite, ESM, OneDrive",Monthly,1,12,????,"Review the client's users and PCs, make sure OneDrive, ESM and Carbonite are in alignment.",Application
+Update Carbonite Agents,Quarterly,1,4,????,Update the client's Carbonite agents,System
+Patch Group Review,Quarterly,0.5,2,????,Review the patch approval policies. Ensure all servers and workstations that are supposed to be automatically patched are (by being in the correct patch groups),System
+Update Wireless Device Firmware,Quarterly,1,4,????,Update the firmware on the client's access points,Network
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
