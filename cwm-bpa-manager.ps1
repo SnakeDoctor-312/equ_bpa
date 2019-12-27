@@ -4,6 +4,7 @@
 . "$PSScriptRoot\bpa-validator-functions.ps1"
 . "$PSScriptRoot\bpa-task.ps1"
 
+
 $TaskFolder = "$PSScriptRoot\Tasks2"
 $CompanyIDFile = "$PSScriptRoot\CompanyIDs.csv"
 
