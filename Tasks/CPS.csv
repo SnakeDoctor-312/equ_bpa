@@ -16,15 +16,3 @@ Review Active Directory,Monthly,0.5,6,Tsenn,"Review the Active Directory enviorn
 Review Azure Replications,Weekly,0.25,13,Tsenn,Review status of the client's azure replications,System
 Review Azure Portal,Monthly,0.5,6,Tsenn,Review the Azure portal for issues.,Cloud
 Patch Group Review,Quarterly,0.5,2,Tsenn,Review the patch approval policies. Ensure all servers and workstations that are supposed to be automatically patched are (by being in the correct patch groups),System
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,

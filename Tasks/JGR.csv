@@ -8,23 +8,3 @@ Review & Remediate Workstation Patches,Monthly,1,12,Bkew,Identify any issues wit
 Review Network,Monthly,1,12,Bkew,"Utilizing Auvik, review the client's network for issues. Ensure all infrastructure devices are SNMP \ login integrated. Ensure that all devices classified appropraitely.",Network
 Patch Group Review,Quarterly,0.5,2,Bkew,Review the patch approval policies. Ensure all servers and workstations that are supposed to be automatically patched are (by being in the correct patch groups),System
 Update Wireless Device Firmware,Quarterly,1,4,Bkew,Update the firmware on the client's access points,Network
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,

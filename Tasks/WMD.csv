@@ -9,22 +9,3 @@ Review Backups (Carbonite),Monthly,1,12,????,Review the client's Carbonite backu
 Update Carbonite Agents,Quarterly,1,4,????,Update the client's Carbonite agents,System
 Patch Group Review,Quarterly,0.5,2,????,Review the patch approval policies. Ensure all servers and workstations that are supposed to be automatically patched are (by being in the correct patch groups),System
 Update Wireless Device Firmware,Quarterly,1,4,????,Update the firmware on the client's access points,Network
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,

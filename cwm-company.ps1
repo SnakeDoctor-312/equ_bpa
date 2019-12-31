@@ -40,7 +40,7 @@ function Load-CompanyData {
         $CompanyJSON = $server.GetCompany($NewCompany.id)
 
         if ($CompanyJSON.identifier -notlike "$($CompanyID.Company)*") {
-            #Write-Warning -WarningAction Continue "Error while processing $companyfile`n While validating the following line from the file: $($CompanyID.Company), $($CompanyID.ID)`n Error: $($CompanyJSON.identifier) mismtach with $($NewCompany.abbreviation)" 
+            Write-Warning -WarningAction Continue "Error while processing $companyfile`n While validating the following line from the file: $($CompanyID.Company), $($CompanyID.ID)`n Error: $($CompanyJSON.identifier) mismtach with $($NewCompany.abbreviation)" 
         }
                 
         $NewCompany.identifier = $CompanyJSON.identifier

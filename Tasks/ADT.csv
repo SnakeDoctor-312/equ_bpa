@@ -13,18 +13,3 @@ Review Backups (Azure),Weekly,0.25,13,TSenn,Review the client's Azure backups fo
 Review Network,Monthly,1,12,TSenn,"Utilizing Auvik, review the client's network for issues. Ensure all infrastructure devices are SNMP \ login integrated. Ensure that all devices classified appropraitely.",Network
 Patch Group Review,Quarterly,0.5,2,TSenn,Review the patch approval policies. Ensure all servers and workstations that are supposed to be automatically patched are (by being in the correct patch groups),System
 Update Wireless Device Firmware,Quarterly,1,4,TSenn,Update the firmware on the client's access points,Network
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
