@@ -24,17 +24,20 @@ class Task {
     [double]$Budget
     [TaskFrequency]$Frequency
     [TaskCategory]$Category
-    [string]$owner
+    [string]$Engineer
     [string]$DueDate
     [string]$Description
 
-    Task([string]$Summary, [string]$Frequency, [double]$Budget, [string]$owner,[string]$InitialDescription, [string]$Category)     {
+    Task([string]$Summary, [string]$Frequency, [double]$Budget, [string]$Engineer,[string]$InitialDescription, [string]$Category)     {
         [datetime]$TaskDueDate = Get-Date -Hour 17 -Minute 30 -Second 0;
         
         [bool] $parameterIssue = $false
         
         $this.Frequency = [TaskFrequency]$Frequency
         $this.Category = [TaskCategory]$Category
+        $this.Summary = $Summary
+        $this.Engineer = $Engineer
+        $This.Description = $InitialDescription
 
         $castBudget = [double]::Parse($Budget)
         if ($castBudget -lt 0) {
@@ -82,6 +85,8 @@ function Load-ClientTasks {
     Write-Verbose "Located $($taskImport.Count) rows"
     
     foreach ($taskRow in $taskImport) {
+        #
+        $taskrow | fl
         if ([string]::IsNullOrEmpty($taskRow.Summary)     -or [string]::IsNullOrWhiteSpace($taskRow.Summary) -or `
             [string]::IsNullOrEmpty($taskRow.Budget)      -or [string]::IsNullOrWhiteSpace($taskRow.Budget) -or `
             [string]::IsNullOrEmpty($taskRow.Category)   -or [string]::IsNullOrWhiteSpace($taskRow.Category) -or `

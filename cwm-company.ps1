@@ -26,8 +26,7 @@ function Load-CompanyData {
     $companyIDs = import-csv -Path $companyfile
 
     if (-not (isNotEmptyNull $companyIDs)) {
-        write-error "$companyfile returned a null or empty hashtable"
-        Write-Error "This means the file is likely empty"
+        write-error "$companyfile returned a null or empty hashtable`n This means the file is likely empty"
     }
     
     Write-Verbose "Imported from file: $companyfile"
