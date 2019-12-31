@@ -36,7 +36,13 @@ class Task {
         $this.Frequency = [TaskFrequency]$Frequency
         $this.Category = [TaskCategory]$Category
         $this.Summary = $Summary
-        $this.Engineer = $Engineer
+        if ($Engineer -eq "?????") {
+            #"Unassigned engineer"
+            $this.Engineer = "TSenn"
+        } else {    
+            $this.Engineer = $Engineer
+        }
+
         $This.Description = $InitialDescription
 
         $castBudget = [double]::Parse($Budget)
@@ -85,8 +91,7 @@ function Load-ClientTasks {
     Write-Verbose "Located $($taskImport.Count) rows"
     
     foreach ($taskRow in $taskImport) {
-        #
-        $taskrow | fl
+        
         if ([string]::IsNullOrEmpty($taskRow.Summary)     -or [string]::IsNullOrWhiteSpace($taskRow.Summary) -or `
             [string]::IsNullOrEmpty($taskRow.Budget)      -or [string]::IsNullOrWhiteSpace($taskRow.Budget) -or `
             [string]::IsNullOrEmpty($taskRow.Category)   -or [string]::IsNullOrWhiteSpace($taskRow.Category) -or `

@@ -19,19 +19,20 @@ $server.connect()
 $Companies = Load-CompanyData $CompanyIDFile $TaskFolder
 
 foreach ($company in $Companies) {
+    #
     $company
     #write-host $company.path
     $tasks = Load-ClientTasks $company.path
     foreach ($task in $tasks) {
-        $Task | FL
+        
         if ($Task.Frequency -eq "Weekly") {
             #$company.abbreviation
             #$task
             $Task | FL
-            #$newTask = [Task]::new($task.Summary, $Task.Frequency, $Task.Budget, $Task.Engineer, $Task.Description, $Task.Category)
-                #Task([string]$Summary, [string]$Frequency, [double]$Budget, [string]$owner,[string]$InitialDescription, [string]$Category) 
-            #$newtask|FL   
-            #$Server.CreateTicket($newTask.Summary, $NewTask.Description , $company.id, $newTask.owner, 71, $newTask.Type, $newTask.Category, 1022, $newtask.DueDate, $newTask.budget)
+            $newTask = [Task]::new($task.Summary, $Task.Frequency, $Task.Budget, $Task.Engineer, $Task.Description, $Task.Category)
+                
+            $newtask|FL   
+            $Server.CreateTicket($newTask.Summary, $NewTask.Description , $company.id, $newTask.Engineer, 71, $newTask.Frequency, $newTask.Category, 1022, $newtask.DueDate, $newTask.budget)
         }
         if ($Task.Frequency -eq "Monthly") {
             #$company.abbreviation
