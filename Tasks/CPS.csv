@@ -1,0 +1,30 @@
+Summary,Freq,Budget,Annual Time,Engineer,Description,Category
+Review Group Policies,Annual,1,1,Tsenn,Work with the account's vCIO or primary engineer to review the configuration of the client's Group policies. Ensure that the configuraiton is still optimal for the client's environment.,System
+Update UPS Firmware,Annual,2,2,Tsenn,Update the firmware on the web controller of the client's UPS(s),System
+Update Switch Firmware,Annual,4,4,Tsenn,Update the firmware on the client's switches,Network
+Update Server Firmware,SemiAnnual,2,4,Tsenn,Update the firmware on the client's servers - For  HP servers check for a model specific BIOS update that may have been released after the latest ISO/,System
+Update Firewall Firmware,Quarterly,2,8,Tsenn,Install the reccommended firewall firmware,Network
+Update Server iLO Firmware,Quarterly,1,4,Tsenn,Update the iLO firmware on the cleint's servers,System
+Update Wireless Non-Meraki Devices,Quarterly,4,16,Tsenn,Update the firmware on the client's non-meraki devices,Network
+Update Wireless Meraki Devices,Quarterly,1,4,Tsenn,Update the firmware on the client's Meraki devices,Network
+Review Windows Server Logs,Monthly,0.5,6,Tsenn,Review the client's windows server application and security logs for standout issues,System
+Review Meraki Portal,Monthly,0.5,6,Tsenn,Review the client's Meraki portal for issues that could impact the network,Network
+Review Network,Monthly,1,12,Tsenn,"Utilizing Auvik, review the client's network for issues. Ensure all infrastructure devices are SNMP \ login integrated. Ensure that all devices classified appropraitely.",Network
+Review Google Apps Portal,Monthly,0.25,3,Tsenn,Review the client's Google Apps portal for licensing or other issues,Cloud
+Review Office 365 Portal,Monthly,0.25,3,Tsenn,Review the client's Office 365 portal for licensing or other issues,Cloud
+Review Active Directory,Monthly,0.5,6,Tsenn,"Review the Active Directory enviornment for issues via  repadmin, dcdiag. Review admin group memberships for unauthrized members",System
+Review Azure Replications,Weekly,0.25,13,Tsenn,Review status of the client's azure replications,System
+Review Azure Portal,Monthly,0.5,6,Tsenn,Review the Azure portal for issues.,Cloud
+Patch Group Review,Quarterly,0.5,2,Tsenn,Review the patch approval policies. Ensure all servers and workstations that are supposed to be automatically patched are (by being in the correct patch groups),System
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,

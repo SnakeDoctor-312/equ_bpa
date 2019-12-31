@@ -1,0 +1,56 @@
+Summary,Frequency,Description,Category
+Backup Hypervisor Configuration,SemiAnnual,"Take a backup of the hypervisor configuration and store the data in ITG, attach to the appropriate client device",System
+DR Test,Quarterly,Before a DR failover test or execute the client's DR Test,System
+Nipper Studio Config Audit,Annual,Perform an audit of the client's switch configuration for issues,Security
+Patch Group Review,Quarterly,Review the patch approval policies. Ensure all servers and workstations that are supposed to be automatically patched are (by being in the correct patch groups),System
+Review & Remediate Workstation Patches,Monthly,Identify any issues with workstations that may be preventing patches from being installed,Desktop
+Review Active Directory,Monthly,"Review the Active Directory enviornment for issues via  repadmin, dcdiag. Review admin group memberships for unauthrized members",System
+Review Azure Portal,Monthly,Review the Azure portal for issues.,Cloud
+Review Azure Replications,Weekly,Review status of the client's azure replications,System
+Review Backup Configuration,SemiAnnual,Work with the account's vCIO or primary engineer to review the configuration of the client's backup jobs. Ensure that the configuraiton is still optimal for the client's environment,System
+Review Backups (Azure),Weekly,Review the client's Azure backups for issues.,System
+Review Backups (Barracuda),Weekly,Review the client's Barracuda backups for issues,System
+Review Backups (Carbonite),Weekly,Review the client's Carbonite backups for issues,System
+Review Backups (Datto),Weekly,Review the client's Datto backups for issues,System
+Review Backups (Veeam),Weekly,Review the client's Veeam backups for issues,System
+Review Backups (Zerto),Weekly,Review the cleint's Zerto replications for issues,System
+Review Google Apps Portal,Monthly,Review the client's Google Apps portal for licensing or other issues,Cloud
+Review Group Policies,Annual,Work with the account's vCIO or primary engineer to review the configuration of the client's Group policies. Ensure that the configuraiton is still optimal for the client's environment.,System
+Review Meraki Portal,Monthly,Review the client's Meraki portal for issues that could impact the network,Network
+Review Network,Monthly,"Utilizing Auvik, review the client's network for issues. Ensure all infrastructure devices are SNMP \ login integrated. Ensure that all devices classified appropraitely.",Network
+Review Office 365 Portal,Monthly,Review the client's Office 365 portal for licensing or other issues,Cloud
+Review Windows Server Logs,Monthly,Review the client's windows server application and security logs for standout issues,System
+Review Workstation Disk Space,Monthly,Review the client's workstations for disk space issues,Desktop
+Test File Level Restore from Backup (Azure),Quarterly,Perform a file level restore utilizing the client's Azure backups,System
+Test File Level Restore from Backup (Barracuda),Quarterly,Perform a file level restore utilizing the client's Barracuda backups,System
+Test File Level Restore from Backup (Carbonite),Quarterly,Perform a file level restore utilizing the client's Carbonite backups,System
+Test File Level Restore from Backup (Datto),Quarterly,Perform a file level restore utilizing the client's Datto backups,System
+Test File Level Restore from Backup (Veeam),Quarterly,Perform a file level restore utilizing the client's Veeam backups,System
+Update Azure Agents,Quarterly,Update the client's Azure backup\replication agents,System
+Update Barracuda Appliance,Quarterly,Update the client's Barracuda appliance and agents,System
+Update Carbonite Agents,Quarterly,Update the client's Carbonite agents,System
+Update Cloud Genix Firmware,Quarterly,Update the cloud Genix firmware - Touch base with Ben P before scheduling in order to determine the best firmware,Network
+Update Datto Appliance,Quarterly,Update the client's Datto appliance and agents,System
+Update ESXi,Quarterly,Install the latest ESXi patch for the currently installed version,System
+Update Exchange,Quarterly,Install the latest Exchange rollup,Application
+Update Firewall Firmware,Quarterly,Install the reccommended firewall firmware,Network
+Update FMC and Firepower Modules,SemiAnnual,Updatre the ASA's FMC and Firepower modules to a version that is compatible with the installed ASA software,Network
+Update Hyper-V Hosts,Quarterly,Patch the client's hyper-v holst,System
+Update Load Balancer Firmware,Annual,Update the firmware on the client's load balancer to the latest reccommedned version,Network
+Update NAS Firmware,Quarterly,Update the firmware on the client's NAS device(s),Storage
+Update Router Firmware,Annual,Update the firmware on the client's router(s),Network
+Update SAN Firmware,Quarterly,Update the firmware on the client's SAN,Storage
+Update Server Firmware,SemiAnnual,Update the firmware on the client's servers - For  HP servers check for a model specific BIOS update that may have been released after the latest ISO/,System
+Update Server iLO Firmware,SemiAnnual,Update the iLO firmware on the cleint's servers,System
+"Update SQL Server - Service Packs, Update Rollups",Quarterly,Install the latest SQL service pack,Application
+Update Switch Firmware,Annual,Update the firmware on the client's switches,Network
+Update UPS Firmware,Annual,Update the firmware on the web controller of the client's UPS(s),System
+Update vCenter,Quarterly,Update vCenter to the latest patch for the currently installed version,System
+Update Veeam,Quarterly,Install the latest version of Veeam Backup and Replication,System
+Update Webroot Agents,Monthly,Review the state of Webroot Agents on the client's systems and update any that have not automatically been updates,Security
+Update Wireless Device Firmware,Quarterly,Update the firmware on the client's access points,Network
+Update Wireless Meraki Devices,Quarterly,Update the firmware on the client's Meraki devices,Network
+Update Wireless Non-Meraki Devices,Quarterly,Update the firmware on the client's non-meraki devices,Network
+Update Zerto Appliances,Quarterly,Update the Zerto appliances (VRA) and management VMs (ZVM),System
+"User List Update – Carbonite, ESM, OneDrive",Monthly,"Review the client's users and PCs, make sure OneDrive, ESM and Carbonite are in alignment.",Application
+Windows Patch Installation - Post Verification,Monthly,Review the operation of the client's server post update,System
