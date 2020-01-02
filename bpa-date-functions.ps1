@@ -131,5 +131,3 @@ function get-AnnualDueDate {
 }
 
 $VerbosePreference = "silent"
-
-$ate = Get-Date -year 2019 -Month 1 -day 1
