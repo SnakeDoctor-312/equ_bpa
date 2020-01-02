@@ -53,7 +53,7 @@ class Task {
             $this.Budget = $castBudget
         }
 
-        switch($this.Type) {
+        switch($this.Frequency) {
             ([TaskFrequency]::Weekly)
                 {$TaskDueDate = get-WeeklyDueDate}
             ([TaskFrequency]::Monthly)
