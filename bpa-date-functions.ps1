@@ -60,7 +60,7 @@ function get-WeeklyDueDate {
     param(
     [datetime] $date = $(Get-Date)
     )
-    while ($Date.DayOfWeek -ne "Friday") {$date = $date.AddDays(1)}
+    while ($Date.DayOfWeek -ne "Thursday") {$date = $date.AddDays(1)}
     write-verbose "Current date: $date, the next end of week is $($date.month)/$($date.day)/$($date.year)"
     return $(Get-Date -year $date.Year -Month $date.Month -Day $date.Day -hour 17 -Minute 30 -second 0)
 }
