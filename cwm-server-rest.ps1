@@ -1,4 +1,6 @@
-﻿class CWServer {
+﻿. "$PSScriptRoot\bpa-task.ps1"
+
+class CWServer {
     [string]$LoginCompanyId
     [string]$ConnectwiseSite
     [string]$CallingCompanyInfoURL
@@ -99,7 +101,7 @@
         }
         return $this.DoRESTPatchAction("service/tickets/"+$ticket,$patchOperation)
     }
-
+    
     [Object[]]CreateTicket([string] $summary, [string] $description, [uint32] $companyID, [string] $owner, [uint32] $boardID, [uint32] $typeID, [uint32] $subTypeID, [uint32] $statusId, [string] $datetime, [double] $budget) {
             ##"2019-09-13T17:59:51Z",
             $ticketJSON = 
@@ -122,6 +124,14 @@
 
         return  $this.DoRESTPOSTAction("service/tickets", $ticketJSON)
     }
+
+    
+    
+    [Object[]]CreateBPAReportTicket([uint32] $companyID, [Task]$Task) {
+        return $this.CreateTicket($Task.Summary, $Task.Description, $companyID, $Task.Engineer, 71, $Task.Frequency, $Task.Category, 1022, $Task.DueDate, $Task.Budget)
+    }
+  
+
     [Object[]]CreateTicket_NoDate([string] $summary, [string] $description, [uint32] $companyID, [string] $owner, [uint32] $boardID, [uint32] $typeID, [uint32] $subTypeID, [uint32] $statusId, [double] $budget) {
             ##"2019-09-13T17:59:51Z",
             $ticketJSON = 
