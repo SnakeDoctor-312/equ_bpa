@@ -83,7 +83,8 @@
 
     [Object[]]DoRESTPatchAction([string] $request, [string] $action) {
         #$action = ConvertTo-Json -Compress -InputObject $action -depth 100 |Out-String
-        #$action ="[$action]"
+        $action ="[$action]"
+        #write-host $action
         #write-host $action
         $result = Invoke-RestMethod -Method Patch -Uri "$($this.APIRequestURL)$request" -Headers $this.AuthHeader -ContentType "application/json" -UseBasicParsing -Body $action
         return $result;
@@ -210,24 +211,34 @@
         return $true
     }
 
+    [Object[]]SetConfigType([string] $config, [string] $newType) {
+          $action1="{
+            ""op"": ""replace"",
+            ""path"": ""type"",
+            ""value"": 
+    	        {
+                  ""id"": ""$($newType)""
+                }
+          }"
+        return $this.DoRESTPatchAction("company/configurations/"+$config+"/changetype",$action1)
+    }
+
 
  #   authorization: Basic ZXF1aWxpYnJpdW1NTERCSEJ2aDVMTkx5dnVLOlFNY1ZkQW9qTjhwNkVBOUo=
 }
 
 $Server = [CWServer]::new("equilibrium", "eqwf.equilibriuminc.com", "MLDBHBvh5LNLyvuK", "QMcVdAojN8p6EA9J")
 $server.connect()
-$server.GetConfigurationTypes(150)| ft -Property id, name, inactiveFlag
-$server.GetConfigurationTypes(150) | Select-Object -Property id, name, inactiveFlag | Export-csv -Path C:\users\mdeliberto\desktop\cwm-configtypes.csv
+$Server.SetConfigType("18339", "149")
 
 
-  $action1="{
-    ""op"": ""replace"",
-    ""path"": ""type"",
-    ""value"": 
-    	{
-          ""id"": ""111""
-        }
-  }"
+#$server.GetConfigurationTypes(150)| ft -Property id, name, inactiveFlag
+#$server.GetConfigurationTypes(150) | Select-Object -Property id, name, inactiveFlag | Export-csv -Path C:\users\mdeliberto\desktop\cwm-configtypes.csv
+
+
+
+
+  
 
 #$ii = 19350
 #$gettarget = "configurations/types?&pageSize=150"
